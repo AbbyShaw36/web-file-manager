@@ -1,0 +1,8 @@
+html, body { margin: 0; padding: 0; }
+
+.page { font-size: 12px; }
+.disabled { position: relative; cursor: not-allowed; }
+.disabled:after { position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: #fff; opacity: .5; content: ""; }
+
+.c_red { color: #f66; }
+.c_blue { color: #09f; }

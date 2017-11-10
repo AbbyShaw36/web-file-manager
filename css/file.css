@@ -1,0 +1,56 @@
+.filemg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 800px; height: 500px; margin: auto; border: 1px solid #dcdcdc; }
+
+.filetree { width: 100%; height: 100%; }
+.filetree_wrapper { height: 100%; padding-top: 52px; margin-bottom: -1px; box-sizing: border-box; overflow: auto; line-height: 40px; }
+.filetree_list { margin: 0; padding: 0; list-style: none; }
+.filetree_sublist { margin-left: 20px; }
+.filetree_item + .filetree_item { border-top: 1px solid #dcdcdc; }
+.filetree_item:last-child { border-bottom: 1px solid #dcdcdc; }
+.filetree_sublist .filetree_item:last-child { border-bottom: none; }
+.filetree_file { display: block; padding: 0 10px; text-decoration: none; color: #333; }
+.filetree_file:before { margin-right: 10px; content: "\e902"; font-family: "icomoon"; }
+.filetree_input { width: 180px; height: 20px; padding: 0 10px; border: 1px solid #dcdcdc; outline: none; }
+
+/*文件操作列表*/
+.filetree_toolbar { position: absolute; top: 0; width: 100%; overflow: hidden; padding: 10px; background: #fff; border-bottom: 1px solid #dcdcdc; line-height: 30px; box-sizing: border-box; }
+.filetree_toolbar_left { float: left; }
+.filetree_toolbar_right { float: right; }
+.filetree_toolbar_btn { float: left; display: inline-block; padding: 0 20px; background: #09f; border-radius: 2px; text-decoration: none; color: #fff; }
+.filetree_toolbar_btn + .filetree_toolbar_btn { margin-left: 10px; }
+.filetree_toolbar_btn-yellow { background: #f93; }
+
+/*文件夹*/
+.filetree_dir:before { content: "\e900"; color: #fc0; }
+
+/*有子文件的文件夹*/
+.filetree_hasChild:after { float: right; content: ">"; }
+.filetree_hasChild + .filetree_sublist { display: none; }
+.filetree_hasChild.open { border-bottom: 1px solid #dcdcdc; }
+.filetree_hasChild.open:before { content: "\e901"; }
+.filetree_hasChild.open + .filetree_sublist { display: block; }
+
+/*空文件夹*/
+.filetree_empty { display: none; line-height: 20px; text-align: center; color: #999; }
+.filetree_wrapper.empty>ul { display: none; }
+.filetree_wrapper.empty .filetree_empty { display: block; }
+
+/*文件操作*/
+.filetree_item { position: relative; }
+.filetree_operatelist { display: none; position: absolute; right: 0; top: 0; padding-right: 10px; }
+.filetree_operate { display: inline-block; float: left; text-decoration: none; }
+.filetree_operate + .filetree_operate { margin-left: 10px; }
+.filetree_item.operable:hover .filetree_operatelist { display: block; }
+
+/*文件层*/
+.filetree_level .filetree_hasChild:after { content: none; }
+
+/*文件树*/
+.filetree_tree .filetree_wrapper { padding: 62px 10px 10px; line-height: 20px; }
+.filetree_tree .filetree_list { margin-left: 10px; }
+.filetree_tree .filetree_item { border: none; }
+.filetree_tree .filetree_item:before { position: absolute; left: 0; display: inline-block; height: 100%; border-left: 1px dashed #999; content: ""; }
+.filetree_tree .filetree_item:last-child:before { height: 10px; }
+.filetree_tree .filetree_file { display: inline-block; }
+.filetree_tree .filetree_file:after { position: absolute; top: 10px; left: 0; display: inline-block; width: 10px; height: 1px; margin-right: 10px; border-top: 1px dashed #999; content: ""; }
+.filetree_tree .filetree_sublist { margin-left: 15px; }
+.filetree_tree .filetree_hasChild.open { border: none; }
